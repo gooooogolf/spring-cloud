@@ -12,8 +12,12 @@ public class MessageRestController {
     @Value("${message:Hello default}")
     private String message;
 
+    @Value("${server.port}")
+    private String portNumber;
+
     @RequestMapping("/message")
     String getMessage() {
-        return this.message;
+        return String.format("%s with Port Number %s", message, portNumber);
     }
+
 }
