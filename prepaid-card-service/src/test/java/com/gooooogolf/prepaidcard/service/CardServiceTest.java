@@ -69,6 +69,21 @@ public class CardServiceTest {
     }
 
     @Test
+    public void test_createCardWhenCardAlreadyExistShouldFail() {
+        Card cardMock = cardMock();
+        Mockito.when(cardRepository.findByCardNumber(Mockito.anyString())).thenReturn(cardMock);
+
+        try {
+            cardService.createCard(createCardRequestMock());
+        } catch (Exception e) {
+            Assert.assertEquals(String.format("card already exists: %s", cardMock.getCardNumber()), e.getMessage());
+        }
+
+        Mockito.verify(cardRepository, Mockito.times(1)).findByCardNumber(Mockito.anyString());
+        Mockito.verify(cardRepository, Mockito.never()).save(Mockito.any(Card.class));
+    }
+
+    @Test
     public void test_updateCardSuccess() {
         Card cardMock = cardMock();
         Mockito.when(cardRepository.findByCardNumber(Mockito.anyString())).thenReturn(cardMock);
@@ -81,6 +96,56 @@ public class CardServiceTest {
 
     }
 
+    @Test
+    public void test_updateCardWhenCardNotFoundShouldFail() {
+        UpdateCardStatusRequest updateCardStatusRequest = updateCardStatusRequestMock(ACTIVE);
+        Mockito.when(cardRepository.findByCardNumber(Mockito.anyString())).thenReturn(null);
+
+        try {
+            cardService.updateCardStatus(updateCardStatusRequest.getCardNumber(), updateCardStatusRequest);
+        } catch (Exception e) {
+            Assert.assertEquals(String.format("can't find card with number %s", updateCardStatusRequest.getCardNumber()), e.getMessage());
+        }
+
+        Mockito.verify(cardRepository, Mockito.times(1)).findByCardNumber(Mockito.anyString());
+        Mockito.verify(cardRepository, Mockito.never()).save(Mockito.any(Card.class));
+    }
+
+    @Test
+    public void test_updateCardWhenCvvNotMatchShouldFail() {
+        Card cardMock = cardMock();
+        UpdateCardStatusRequest updateCardStatusRequest = updateCardStatusRequestMock(ACTIVE);
+        updateCardStatusRequest.setCvv("000");
+
+        Mockito.when(cardRepository.findByCardNumber(Mockito.anyString())).thenReturn(cardMock);
+
+        try {
+            cardService.updateCardStatus(updateCardStatusRequest.getCardNumber(), updateCardStatusRequest);
+        } catch (Exception e) {
+            Assert.assertEquals("cvv is not match", e.getMessage());
+        }
+
+        Mockito.verify(cardRepository, Mockito.times(1)).findByCardNumber(Mockito.anyString());
+        Mockito.verify(cardRepository, Mockito.never()).save(Mockito.any(Card.class));
+    }
+
+    @Test
+    public void test_findCardSuccess() {
+        Card cardMock = cardMock();
+        Mockito.when(cardRepository.findByCardNumber(Mockito.anyString())).thenReturn(cardMock);
+
+        CardResponse cardResponse = cardService.findByCardNumber(cardMock.getCardNumber());
+
+        Assert.assertThat(cardResponse.getCardId(), is(equalTo(cardMock.getCardId())));
+        Assert.assertThat(cardResponse.getCardNumber(), is(equalTo(cardMock.getCardNumber())));
+        Assert.assertThat(cardResponse.getCvv(), is(equalTo(cardMock.getCvv())));
+        Assert.assertThat(cardResponse.getCardType(), is(equalTo(cardMock.getCardType().name())));
+        Assert.assertThat(cardResponse.getExpYear(), is(equalTo(cardMock.getExpYear())));
+        Assert.assertThat(cardResponse.getExpMonth(), is(equalTo(cardMock.getExpMonth())));
+        Assert.assertThat(cardResponse.getModifiedDate(), is(equalTo(cardMock.getModifiedDate())));
+
+        Mockito.verify(cardRepository, Mockito.times(1)).findByCardNumber(Mockito.anyString());
+    }
 
     private Card cardMock() {
         Card card = new Card();
