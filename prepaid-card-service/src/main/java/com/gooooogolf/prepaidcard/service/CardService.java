@@ -27,26 +27,25 @@ public class CardService {
         Card card = new Card();
         card.setCardId(createCard.getCardId());
         card.setCardNumber(createCard.getCardNumber());
-        card.setCvv(createCard.getCcv());
+        card.setCvv(createCard.getCvv());
         card.setExpMonth(createCard.getExpMonth());
         card.setExpYear(createCard.getExpYear());
         card.setCardType(CardType.fromValue(createCard.getCardType()));
-        repository.save(card);
 
         log.info("new card has been created: {}", card.getCardNumber());
 
-        return convertToCardResponse(card);
+        return convertToCardResponse(repository.save(card));
     }
 
     public void updateCardStatus(String cardNumber, UpdateCardStatusRequest cardStatus) {
         Card card = repository.findByCardNumber(cardNumber);
         Assert.notNull(card, "can't find card with number " + cardNumber);
-        Assert.isTrue(card.getCvv().equals(cardStatus.getCcv()), "ccv is not match");
+        Assert.isTrue(card.getCvv().equals(cardStatus.getCvv()), "cvv is not match");
 
         card.setCardStatus(CardStatus.fromName(cardStatus.getCardStatus()));
         saveChanges(cardNumber, card);
 
-        log.debug("card {} status ({}) has been updated", cardNumber, cardStatus);
+        log.debug("card {} status is {}", cardNumber, cardStatus.getCardStatus());
     }
 
     public void saveChanges(String cardNumber, Card update) {

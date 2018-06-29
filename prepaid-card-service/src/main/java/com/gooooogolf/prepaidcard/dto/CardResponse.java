@@ -11,7 +11,7 @@ import java.util.Date;
 public class CardResponse {
     private String cardId;
     private String cardNumber;
-    private String ccv;
+    private String cvv;
     private String expMonth;
     private String expYear;
     private String cardType;

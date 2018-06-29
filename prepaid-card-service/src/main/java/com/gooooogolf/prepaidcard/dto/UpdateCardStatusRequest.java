@@ -8,6 +8,6 @@ import lombok.Data;
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class UpdateCardStatusRequest {
     private String cardNumber;
-    private String ccv;
+    private String cvv;
     private String cardStatus;
 }
