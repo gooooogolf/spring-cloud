@@ -14,6 +14,7 @@
         <module name="account-service" />
         <module name="api-gateway-service" />
         <module name="configuration-service" />
+        <module name="customer-service" />
         <module name="discovery-service" />
         <module name="prepaid-card-service" />
       </profile>
@@ -22,6 +23,7 @@
       <module name="account-service" target="1.8" />
       <module name="api-gateway-service" target="1.8" />
       <module name="configuration-service" target="1.8" />
+      <module name="customer-service" target="1.8" />
       <module name="discovery-service" target="1.8" />
       <module name="payment-service" target="1.8" />
       <module name="prepaid-card-service" target="1.8" />
