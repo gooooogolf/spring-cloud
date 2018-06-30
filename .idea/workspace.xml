@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d2908d3-4798-4cb3-9758-bea4339b6f1e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/dto/ValidationErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/controller/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/dto/CreateCardRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/dto/CreateCardRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/dto/UpdateCardStatusRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/dto/UpdateCardStatusRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepaid-card-service/src/test/java/com/gooooogolf/prepaidcard/controller/CardControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/prepaid-card-service/src/test/java/com/gooooogolf/prepaidcard/controller/CardControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepaid-card-service/src/test/java/com/gooooogolf/prepaidcard/service/CardServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/prepaid-card-service/src/test/java/com/gooooogolf/prepaidcard/service/CardServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/account-api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-api-gateway/src/main/java/com/gooooogolf/gateway/AccountApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-api-gateway/src/main/java/com/gooooogolf/gateway/ApiGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/account-api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-api-gateway/src/test/java/com/gooooogolf/gateway/AccountApiGatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-api-gateway/src/test/java/com/gooooogolf/gateway/ApiGatewayApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-api-gateway/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/account-api-gateway/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-api-gateway/target/surefire-reports/TEST-com.gooooogolf.accountapigateway.AccountApiGatewayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/account-api-gateway/target/surefire-reports/TEST-com.gooooogolf.accountapigateway.AccountApiGatewayApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-api-gateway/target/surefire-reports/TEST-com.gooooogolf.gateway.AccountApiGatewayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/account-api-gateway/target/surefire-reports/TEST-com.gooooogolf.gateway.AccountApiGatewayApplicationTests.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/payment-service/target/" />
     <ignored path="$PROJECT_DIR$/account-service/target/" />
@@ -33,47 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/prepaid-card-service/src/main/resources/application.properties">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/account-api-gateway/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="41" lean-forward="true" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CardController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/controller/CardController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CardResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/dto/CardResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CardControllerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/prepaid-card-service/src/test/java/com/gooooogolf/prepaidcard/controller/CardControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -119,7 +86,6 @@
         <option value="$PROJECT_DIR$/account-api-gateway/src/main/java/com/gooooogolf/gateway/config/FilterConfig.java" />
         <option value="$PROJECT_DIR$/discovery-service/src/main/java/com/gooooogolf/discovery/DiscoveryApplication.java" />
         <option value="$PROJECT_DIR$/discovery-service/pom.xml" />
-        <option value="$PROJECT_DIR$/account-api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/account-api-gateway/src/main/resources/bootstrap.properties" />
         <option value="$PROJECT_DIR$/account-service/pom.xml" />
         <option value="$PROJECT_DIR$/configuration-service/pom.xml" />
@@ -151,6 +117,7 @@
         <option value="$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/dto/UpdateCardStatusRequest.java" />
         <option value="$PROJECT_DIR$/prepaid-card-service/src/test/java/com/gooooogolf/prepaidcard/controller/CardControllerTest.java" />
         <option value="$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/controller/CardController.java" />
+        <option value="$PROJECT_DIR$/account-api-gateway/pom.xml" />
       </list>
     </option>
   </component>
@@ -164,6 +131,10 @@
   <component name="MavenProjectNavigator">
     <treeState>
       <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="account-api-gateway" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="prepaid-card-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
@@ -203,145 +174,79 @@
           <expand>
             <path>
               <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account-service" type="462c0819:PsiDirectoryNode" />
+              <item name="account-api-gateway" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account-service" type="462c0819:PsiDirectoryNode" />
+              <item name="account-api-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="account" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="account-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="account" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prepaid-card-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prepaid-card-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prepaid-card-service" type="462c0819:PsiDirectoryNode" />
+              <item name="account-api-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prepaid-card-service" type="462c0819:PsiDirectoryNode" />
+              <item name="account-api-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prepaid-card-service" type="462c0819:PsiDirectoryNode" />
+              <item name="account-api-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="prepaidcard" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prepaid-card-service" type="462c0819:PsiDirectoryNode" />
+              <item name="account-api-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="prepaidcard" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prepaid-card-service" type="462c0819:PsiDirectoryNode" />
+              <item name="account-api-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="prepaidcard" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prepaid-card-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="prepaidcard" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prepaid-card-service" type="462c0819:PsiDirectoryNode" />
+              <item name="account-api-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prepaid-card-service" type="462c0819:PsiDirectoryNode" />
+              <item name="account-api-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prepaid-card-service" type="462c0819:PsiDirectoryNode" />
+              <item name="account-api-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prepaid-card-service" type="462c0819:PsiDirectoryNode" />
+              <item name="account-api-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="prepaidcard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prepaid-card-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="prepaidcard" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prepaid-card-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="prepaidcard" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -382,9 +287,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CardControllerTest">
+  <component name="RunManager" selected="JUnit.ApiGatewayApplicationTests">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="ApiGatewayApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-gateway-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gooooogolf.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.gooooogolf.gateway" />
+      <option name="MAIN_CLASS_NAME" value="com.gooooogolf.gateway.ApiGatewayApplicationTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="CardControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="prepaid-card-service" />
@@ -478,29 +406,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="CardServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="prepaid-card-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gooooogolf.prepaidcard.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.gooooogolf.prepaidcard.service" />
-      <option name="MAIN_CLASS_NAME" value="com.gooooogolf.prepaidcard.service.CardServiceTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -516,6 +421,16 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="payment-service" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -540,19 +455,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.CardServiceTest" />
       <item itemvalue="JUnit.CardControllerTest" />
       <item itemvalue="JUnit.CardControllerTest.test_createCardWhenMissingCardNumberShouldFail" />
       <item itemvalue="JUnit.CardControllerTest.test_createCardWhenInvalidCardNumberShouldFail" />
       <item itemvalue="JUnit.CardControllerTest.test_updateCardStatusWhenMissingCardStatusShouldFail" />
+      <item itemvalue="JUnit.ApiGatewayApplicationTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ApiGatewayApplicationTests" />
         <item itemvalue="JUnit.CardControllerTest" />
         <item itemvalue="JUnit.CardControllerTest.test_updateCardStatusWhenMissingCardStatusShouldFail" />
         <item itemvalue="JUnit.CardControllerTest.test_createCardWhenInvalidCardNumberShouldFail" />
         <item itemvalue="JUnit.CardControllerTest.test_createCardWhenMissingCardNumberShouldFail" />
-        <item itemvalue="JUnit.CardServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -570,12 +485,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CardControllerTest_test_createCardWhenInvalidCardNumberShouldFail - 2018.06.30 at 14h 17m 40s.xml">
-      <configuration name="CardControllerTest.test_createCardWhenInvalidCardNumberShouldFail" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CardControllerTest_test_createCardWhenInvalidCardNumberShouldFail - 2018.06.30 at 14h 17m 47s.xml">
-      <configuration name="CardControllerTest.test_createCardWhenInvalidCardNumberShouldFail" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CardControllerTest_test_createCardWhenInvalidCardNumberShouldFail - 2018.06.30 at 14h 18m 08s.xml">
       <configuration name="CardControllerTest.test_createCardWhenInvalidCardNumberShouldFail" configurationId="JUnit" />
     </history-entry>
@@ -600,6 +509,12 @@
     <history-entry file="CardControllerTest_test_updateCardStatusWhenMissingCardStatusShouldFail - 2018.06.30 at 14h 26m 15s.xml">
       <configuration name="CardControllerTest.test_updateCardStatusWhenMissingCardStatusShouldFail" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CardControllerTest - 2018.06.30 at 14h 27m 37s.xml">
+      <configuration name="CardControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApiGatewayApplicationTests - 2018.06.30 at 14h 35m 18s.xml">
+      <configuration name="ApiGatewayApplicationTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="798" extended-state="6" />
@@ -613,14 +528,14 @@
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32872927" />
-      <window_info anchor="right" id="Maven Projects" order="8" sideWeight="0.49902913" visible="true" weight="0.14097223" />
+      <window_info anchor="right" id="Maven Projects" order="8" sideWeight="0.49902913" visible="true" weight="0.20069444" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28867403" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28867403" />
       <window_info anchor="right" id="Coverage" sideWeight="0.5009709" side_tool="true" weight="0.14097223" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32952926" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23125" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872927" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" auto_hide="true" id="Ant Build" internal_type="SLIDING" order="1" show_stripe_button="false" type="SLIDING" weight="0.24964234" />
@@ -661,14 +576,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/controller/CardController.java</url>
-          <line>48</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="14" />
     </breakpoint-manager>
   </component>
@@ -677,31 +584,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/payment-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account-service/src/main/resources/bootstrap.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account-api-gateway/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-121">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/discovery-service/src/main/java/com/gooooogolf/discovery/DiscoveryApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account-api-gateway/src/main/java/com/gooooogolf/gateway/AccountApiGatewayApplication.java">
+    <entry file="file://$PROJECT_DIR$/account-api-gateway/src/main/java/com/gooooogolf/gateway/ApiGatewayApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
@@ -942,13 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prepaid-card-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="41" lean-forward="true" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/ParentRunner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1059,16 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/dto/CardResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/dto/CreateCardRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -1086,10 +952,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prepaid-card-service/src/test/java/com/gooooogolf/prepaidcard/controller/CardControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/dto/CardResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
+        <state relative-caret-position="270">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1098,11 +964,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prepaid-card-service/src/main/java/com/gooooogolf/prepaidcard/controller/CardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="585">
+          <caret line="39" column="60" lean-forward="true" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prepaid-card-service/src/test/java/com/gooooogolf/prepaidcard/controller/CardControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="196" column="38" lean-forward="true" selection-start-line="196" selection-start-column="38" selection-end-line="196" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prepaid-card-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="41" lean-forward="true" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-api-gateway/src/main/java/com/gooooogolf/gateway/filter/SimpleFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-api-gateway/src/main/java/com/gooooogolf/gateway/config/FilterConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-api-gateway/src/test/java/com/gooooogolf/gateway/ApiGatewayApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-api-gateway/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1158,7 +1072,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>prepaid-card-service</last-edited>
+          <last-edited>account-api-gateway</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
