@@ -36,7 +36,7 @@ public class CardServiceTest {
     private CardType cardType = VIRTUAL;
     private CardStatus cardStatus = INACTIVE;
     private String cardId = "942844931049980509";
-    private String cardNumber = "1710500064352";
+    private String cardNumber = "5541710500064352";
     private String cvv = "999";
     private String expMonth = "12";
     private String expYear = "2020";

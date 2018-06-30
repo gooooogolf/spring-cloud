@@ -2,10 +2,13 @@ package com.gooooogolf.prepaidcard.controller;
 
 import com.gooooogolf.prepaidcard.dto.CreateCardRequest;
 import com.gooooogolf.prepaidcard.dto.UpdateCardStatusRequest;
+import com.gooooogolf.prepaidcard.dto.ValidationErrorResponse;
 import com.gooooogolf.prepaidcard.service.CardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -33,4 +36,17 @@ public class CardController {
 
         return ResponseEntity.ok(cardNumber);
     }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity handleValidationError(MethodArgumentNotValidException ex) {
+        BindingResult result = ex.getBindingResult();
+
+        ValidationErrorResponse response = new ValidationErrorResponse();
+        result.getFieldErrors().stream()
+                .map(e -> e.getDefaultMessage())
+                .forEach(response::addFieldError);
+
+        return ResponseEntity.badRequest().body(response);
+    }
+
 }
