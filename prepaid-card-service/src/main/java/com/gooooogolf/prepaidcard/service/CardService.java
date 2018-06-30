@@ -13,6 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @Slf4j
 public class CardService {
@@ -41,6 +44,7 @@ public class CardService {
         Card card = repository.findByCardNumber(cardNumber);
         Assert.notNull(card, "can't find card with number " + cardNumber);
         Assert.isTrue(card.getCvv().equals(cardStatus.getCvv()), "cvv is not match");
+        Assert.isTrue(card.getCustomerId().equals(cardStatus.getCustomerId()), "customer is not match");
 
         card.setCardStatus(CardStatus.fromName(cardStatus.getCardStatus()));
         saveChanges(cardNumber, card);
@@ -56,6 +60,12 @@ public class CardService {
 
     public CardResponse findByCardNumber(String cardNumber) {
         return convertToCardResponse(repository.findByCardNumber(cardNumber));
+    }
+
+    public List<CardResponse> findByCustomerId(String customerId) {
+        return repository.findByCustomerId(customerId).stream()
+                .map(item -> convertToCardResponse(item))
+                .collect(Collectors.toList());
     }
 
     private CardResponse convertToCardResponse(Card card) {

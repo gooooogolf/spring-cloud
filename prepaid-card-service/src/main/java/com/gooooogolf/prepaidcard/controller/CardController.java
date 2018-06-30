@@ -25,6 +25,11 @@ public class CardController {
         return ResponseEntity.status(HttpStatus.CREATED).body(cardService.createCard(request));
     }
 
+    @GetMapping
+    public ResponseEntity findByCustomerId(@RequestParam(name = "customerId", required = true) String customerId) {
+        return ResponseEntity.ok(cardService.findByCustomerId(customerId));
+    }
+
     @GetMapping(value = "/{cardNumber}")
     public ResponseEntity findByCardNumber(@PathVariable String cardNumber) {
         return ResponseEntity.ok(cardService.findByCardNumber(cardNumber));

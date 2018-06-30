@@ -20,6 +20,10 @@ public class UpdateCardStatusRequest {
     @Pattern(regexp = "(^\\d{3}$)+", message = "invalid cvv")
     private String cvv;
 
+    @NotNull(message = "customerId is missing")
+    @Size(min = 1, max = 50, message = "invalid customerId")
+    private String customerId;
+
     @NotNull(message = "card_status is missing")
     @Size(min = 1, max = 10, message = "invalid card_status")
     private String cardStatus;

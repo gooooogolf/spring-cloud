@@ -16,11 +16,13 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import static com.gooooogolf.prepaidcard.domain.CardStatus.ACTIVE;
 import static com.gooooogolf.prepaidcard.domain.CardStatus.INACTIVE;
-import static com.gooooogolf.prepaidcard.domain.CardType.VIRTUAL;
+import static com.gooooogolf.prepaidcard.domain.CardType.VISA;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
@@ -33,7 +35,7 @@ public class CardServiceTest {
     private CardRepository cardRepository;
 
     private Long id = 1L;
-    private CardType cardType = VIRTUAL;
+    private CardType cardType = VISA;
     private CardStatus cardStatus = INACTIVE;
     private String cardId = "942844931049980509";
     private String cardNumber = "5541710500064352";
@@ -41,6 +43,9 @@ public class CardServiceTest {
     private String expMonth = "12";
     private String expYear = "2020";
     private Date modifiedDate = new Date();
+    private String customerId = "123456789";
+    private String cardName = "SIRIMONGKOL PANWA";
+    private String cardCompany = "SCB";
 
 
     @Before
@@ -130,7 +135,25 @@ public class CardServiceTest {
     }
 
     @Test
-    public void test_findCardSuccess() {
+    public void test_updateCardWhenCustomerIdNotMatchShouldFail() {
+        Card cardMock = cardMock();
+        UpdateCardStatusRequest updateCardStatusRequest = updateCardStatusRequestMock(ACTIVE);
+        updateCardStatusRequest.setCustomerId(customerId + 1);
+
+        Mockito.when(cardRepository.findByCardNumber(Mockito.anyString())).thenReturn(cardMock);
+
+        try {
+            cardService.updateCardStatus(updateCardStatusRequest.getCardNumber(), updateCardStatusRequest);
+        } catch (Exception e) {
+            Assert.assertEquals("customer is not match", e.getMessage());
+        }
+
+        Mockito.verify(cardRepository, Mockito.times(1)).findByCardNumber(Mockito.anyString());
+        Mockito.verify(cardRepository, Mockito.never()).save(Mockito.any(Card.class));
+    }
+
+    @Test
+    public void test_findCardByCardNumberSuccess() {
         Card cardMock = cardMock();
         Mockito.when(cardRepository.findByCardNumber(Mockito.anyString())).thenReturn(cardMock);
 
@@ -147,6 +170,25 @@ public class CardServiceTest {
         Mockito.verify(cardRepository, Mockito.times(1)).findByCardNumber(Mockito.anyString());
     }
 
+    @Test
+    public void test_findCardByCustomerIdSuccess() {
+        Card cardMock = cardMock();
+        List<Card> cardMocks = Arrays.asList(cardMock);
+        Mockito.when(cardRepository.findByCustomerId(Mockito.anyString())).thenReturn(cardMocks);
+
+        List<CardResponse> cardResponses = cardService.findByCustomerId(cardMock.getCustomerId());
+
+        Assert.assertThat(cardResponses.get(0).getCardId(), is(equalTo(cardMock.getCardId())));
+        Assert.assertThat(cardResponses.get(0).getCardNumber(), is(equalTo(cardMock.getCardNumber())));
+        Assert.assertThat(cardResponses.get(0).getCvv(), is(equalTo(cardMock.getCvv())));
+        Assert.assertThat(cardResponses.get(0).getCardType(), is(equalTo(cardMock.getCardType().name())));
+        Assert.assertThat(cardResponses.get(0).getExpYear(), is(equalTo(cardMock.getExpYear())));
+        Assert.assertThat(cardResponses.get(0).getExpMonth(), is(equalTo(cardMock.getExpMonth())));
+        Assert.assertThat(cardResponses.get(0).getModifiedDate(), is(equalTo(cardMock.getModifiedDate())));
+
+        Mockito.verify(cardRepository, Mockito.times(1)).findByCustomerId(Mockito.anyString());
+    }
+
     private Card cardMock() {
         Card card = new Card();
         card.setId(id);
@@ -159,6 +201,9 @@ public class CardServiceTest {
         card.setExpMonth(expMonth);
         card.setCreatedDate(modifiedDate);
         card.setModifiedDate(modifiedDate);
+        card.setCustomerId(customerId);
+        card.setCardCompany(cardCompany);
+        card.setCardName(cardName);
 
         return card;
     }
@@ -171,6 +216,9 @@ public class CardServiceTest {
         createCardRequest.setCardType(cardType.getValue());
         createCardRequest.setExpYear(expYear);
         createCardRequest.setExpMonth(expMonth);
+        createCardRequest.setCustomerId(customerId);
+        createCardRequest.setCardCompany(cardCompany);
+        createCardRequest.setCardName(cardName);
 
         return createCardRequest;
     }
@@ -179,6 +227,7 @@ public class CardServiceTest {
         UpdateCardStatusRequest updateCardStatusRequest = new UpdateCardStatusRequest();
         updateCardStatusRequest.setCardNumber(cardNumber);
         updateCardStatusRequest.setCvv(cvv);
+        updateCardStatusRequest.setCustomerId(customerId);
         updateCardStatusRequest.setCardStatus(cardStatus.getName());
 
         return updateCardStatusRequest;

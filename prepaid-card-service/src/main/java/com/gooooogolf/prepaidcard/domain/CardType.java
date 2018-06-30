@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Optional;
 
 public enum CardType {
-    VIRTUAL("virtual");
+    VISA("Visa"), MASTER_CARD("MasterCard");
 
     private String value;
 
