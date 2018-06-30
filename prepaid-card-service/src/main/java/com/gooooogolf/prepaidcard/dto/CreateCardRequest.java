@@ -35,4 +35,14 @@ public class CreateCardRequest {
     @NotNull(message = "card_type is missing")
     @Size(min = 1, max = 30, message = "invalid card_type")
     private String cardType;
+
+    @Size(min = 5, max = 50, message = "invalid card_name")
+    private String cardName;
+
+    @Size(min = 2, max = 50, message = "invalid card_company")
+    private String cardCompany;
+
+    @NotNull(message = "customerId is missing")
+    @Size(min = 1, max = 50, message = "invalid customerId")
+    private String customerId;
 }

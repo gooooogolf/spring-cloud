@@ -14,6 +14,9 @@ public class CardResponse {
     private String cvv;
     private String expMonth;
     private String expYear;
+    private String cardName;
+    private String cardCompany;
     private String cardType;
     private Date modifiedDate;
+    private String customerId;
 }

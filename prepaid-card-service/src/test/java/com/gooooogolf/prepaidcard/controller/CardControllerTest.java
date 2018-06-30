@@ -24,7 +24,7 @@ import java.util.Date;
 
 import static com.gooooogolf.prepaidcard.domain.CardStatus.ACTIVE;
 import static com.gooooogolf.prepaidcard.domain.CardStatus.INACTIVE;
-import static com.gooooogolf.prepaidcard.domain.CardType.VIRTUAL;
+import static com.gooooogolf.prepaidcard.domain.CardType.VISA;
 import static org.hamcrest.Matchers.hasSize;
 
 public class CardControllerTest {
@@ -37,7 +37,7 @@ public class CardControllerTest {
     private MockMvc mockMvc;
     private String CARDS_PATH = "/cards";
     private Long id = 1L;
-    private CardType cardType = VIRTUAL;
+    private CardType cardType = VISA;
     private CardStatus cardStatus = INACTIVE;
     private String cardId = "942844931049980509";
     private String cardNumber = "5541710500064352";
@@ -45,6 +45,9 @@ public class CardControllerTest {
     private String expMonth = "12";
     private String expYear = "2020";
     private Date modifiedDate = new Date();
+    private String customerId = "123456789";
+    private String cardName = "SIRIMONGKOL PANWA";
+    private String cardCompany = "SCB";
 
     @Before
     public void setup() {
@@ -72,6 +75,9 @@ public class CardControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.exp_year").value(response.getExpYear()))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.exp_month").value(response.getExpMonth()))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.modified_date").value(response.getModifiedDate()))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.customer_id").value(response.getCustomerId()))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.card_name").value(response.getCardName()))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.card_company").value(response.getCardCompany()))
         ;
 
         Mockito.verify(cardService, Mockito.times(1)).createCard(Mockito.any(CreateCardRequest.class));
@@ -112,6 +118,9 @@ public class CardControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.exp_year").value(response.getExpYear()))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.exp_month").value(response.getExpMonth()))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.modified_date").value(response.getModifiedDate()))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.customer_id").value(response.getCustomerId()))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.card_name").value(response.getCardName()))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.card_company").value(response.getCardCompany()))
         ;
 
         Mockito.verify(cardService, Mockito.times(1)).findByCardNumber(Mockito.anyString());
@@ -186,6 +195,9 @@ public class CardControllerTest {
         cardResponse.setExpYear(expYear);
         cardResponse.setExpMonth(expMonth);
         cardResponse.setModifiedDate(modifiedDate);
+        cardResponse.setCustomerId(customerId);
+        cardResponse.setCardCompany(cardCompany);
+        cardResponse.setCardName(cardName);
 
         return cardResponse;
     }
@@ -198,6 +210,9 @@ public class CardControllerTest {
         createCardRequest.setCardType(cardType.getValue());
         createCardRequest.setExpYear(expYear);
         createCardRequest.setExpMonth(expMonth);
+        createCardRequest.setCustomerId(customerId);
+        createCardRequest.setCardCompany(cardCompany);
+        createCardRequest.setCardName(cardName);
 
         return createCardRequest;
     }
@@ -206,6 +221,7 @@ public class CardControllerTest {
         UpdateCardStatusRequest updateCardStatusRequest = new UpdateCardStatusRequest();
         updateCardStatusRequest.setCardNumber(cardNumber);
         updateCardStatusRequest.setCvv(cvv);
+        updateCardStatusRequest.setCustomerId(customerId);
         updateCardStatusRequest.setCardStatus(cardStatus.getName());
 
         return updateCardStatusRequest;

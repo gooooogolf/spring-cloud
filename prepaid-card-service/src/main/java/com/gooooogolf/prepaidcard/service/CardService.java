@@ -41,6 +41,7 @@ public class CardService {
         Card card = repository.findByCardNumber(cardNumber);
         Assert.notNull(card, "can't find card with number " + cardNumber);
         Assert.isTrue(card.getCvv().equals(cardStatus.getCvv()), "cvv is not match");
+        Assert.isTrue(card.getCustomerId().equals(cardStatus.getCustomerId()), "customer is not match");
 
         card.setCardStatus(CardStatus.fromName(cardStatus.getCardStatus()));
         saveChanges(cardNumber, card);

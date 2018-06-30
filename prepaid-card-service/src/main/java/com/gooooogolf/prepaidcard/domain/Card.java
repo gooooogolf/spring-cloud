@@ -22,6 +22,8 @@ public class Card {
     private String cardId;
     private String cardNumber;
     private String cvv;
+    private String cardName;
+    private String cardCompany;
     private String expMonth;
     private String expYear;
 
@@ -32,5 +34,7 @@ public class Card {
     @Column(name = "modified_date")
     @LastModifiedDate
     private Date modifiedDate;
+
+    private String customerId;
 
 }
