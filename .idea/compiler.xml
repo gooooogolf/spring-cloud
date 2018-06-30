@@ -16,6 +16,7 @@
         <module name="configuration-service" />
         <module name="discovery-service" />
         <module name="payment-service" />
+        <module name="prepaid-card-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,6 +25,7 @@
       <module name="configuration-service" target="1.8" />
       <module name="discovery-service" target="1.8" />
       <module name="payment-service" target="1.8" />
+      <module name="prepaid-card-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
