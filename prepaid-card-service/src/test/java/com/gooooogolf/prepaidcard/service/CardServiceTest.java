@@ -16,7 +16,9 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import static com.gooooogolf.prepaidcard.domain.CardStatus.ACTIVE;
 import static com.gooooogolf.prepaidcard.domain.CardStatus.INACTIVE;
@@ -151,7 +153,7 @@ public class CardServiceTest {
     }
 
     @Test
-    public void test_findCardSuccess() {
+    public void test_findCardByCardNumberSuccess() {
         Card cardMock = cardMock();
         Mockito.when(cardRepository.findByCardNumber(Mockito.anyString())).thenReturn(cardMock);
 
@@ -166,6 +168,25 @@ public class CardServiceTest {
         Assert.assertThat(cardResponse.getModifiedDate(), is(equalTo(cardMock.getModifiedDate())));
 
         Mockito.verify(cardRepository, Mockito.times(1)).findByCardNumber(Mockito.anyString());
+    }
+
+    @Test
+    public void test_findCardByCustomerIdSuccess() {
+        Card cardMock = cardMock();
+        List<Card> cardMocks = Arrays.asList(cardMock);
+        Mockito.when(cardRepository.findByCustomerId(Mockito.anyString())).thenReturn(cardMocks);
+
+        List<CardResponse> cardResponses = cardService.findByCustomerId(cardMock.getCustomerId());
+
+        Assert.assertThat(cardResponses.get(0).getCardId(), is(equalTo(cardMock.getCardId())));
+        Assert.assertThat(cardResponses.get(0).getCardNumber(), is(equalTo(cardMock.getCardNumber())));
+        Assert.assertThat(cardResponses.get(0).getCvv(), is(equalTo(cardMock.getCvv())));
+        Assert.assertThat(cardResponses.get(0).getCardType(), is(equalTo(cardMock.getCardType().name())));
+        Assert.assertThat(cardResponses.get(0).getExpYear(), is(equalTo(cardMock.getExpYear())));
+        Assert.assertThat(cardResponses.get(0).getExpMonth(), is(equalTo(cardMock.getExpMonth())));
+        Assert.assertThat(cardResponses.get(0).getModifiedDate(), is(equalTo(cardMock.getModifiedDate())));
+
+        Mockito.verify(cardRepository, Mockito.times(1)).findByCustomerId(Mockito.anyString());
     }
 
     private Card cardMock() {

@@ -13,6 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @Slf4j
 public class CardService {
@@ -57,6 +60,12 @@ public class CardService {
 
     public CardResponse findByCardNumber(String cardNumber) {
         return convertToCardResponse(repository.findByCardNumber(cardNumber));
+    }
+
+    public List<CardResponse> findByCustomerId(String customerId) {
+        return repository.findByCustomerId(customerId).stream()
+                .map(item -> convertToCardResponse(item))
+                .collect(Collectors.toList());
     }
 
     private CardResponse convertToCardResponse(Card card) {
