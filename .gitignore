@@ -1,25 +1,27 @@
-/target/
-!.mvn/wrapper/maven-wrapper.jar
+# Add any directories, files, or patterns you don't want to be tracked by version control
+*.class
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
+# Package Files #
+*.war
+*.ear
+
+
+# Eclipse
+.settings/
+.prefs
 .project
-.settings
-.springBeans
-.sts4-cache
+.metadata
+.classpath
+*.prefs
 
-### IntelliJ IDEA ###
+# Intellij
 .idea/
-*.iws
 *.iml
-*.ipr
+*.iws
 
-### NetBeans ###
-/nbproject/private/
-/build/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
